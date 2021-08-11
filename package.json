@@ -1,0 +1,55 @@
+{
+    "name": "xmen",
+    "version": "1.0.0",
+    "description": "API for Magneto to know who is mutant",
+    "main": "index.ts",
+    "scripts": {
+        "start": "node --inspect=5858 -r ts-node/register ./index.ts",
+        "dev": "nodemon ."
+    },
+    "author": "Carlos Andres Tobon Alzate",
+    "license": "MIT",
+    "dependencies": {
+        "@shelf/jest-mongodb": "^1.2.5",
+        "@types/jest": "^26.0.23",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-validator": "^6.12.0",
+        "jest": "^27.0.5",
+        "mongoose": "^5.12.14",
+        "mongoose-unique-validator": "^2.0.3",
+        "ts-jest": "^27.0.3"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.10",
+        "@types/express": "^4.17.12",
+        "@types/mongoose": "^5.11.97",
+        "@types/mongoose-unique-validator": "^1.0.5",
+        "nodemon": "^2.0.7",
+        "ts-node": "^10.0.0"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "**/*.test.ts",
+            "**/*.spec.ts",
+            ".git",
+            "node_modules"
+        ],
+        "watch": [
+            "."
+        ],
+        "exec": "npm start",
+        "ext": "ts"
+    },
+    "jest": {
+        "preset": "ts-jest",
+        "testEnviroment": "node",
+        "collectCoverage": true,
+        "coveragePathIgnorePatterns": [
+            "/node_modules/",
+            "/test/",
+            "/dist/"
+        ]
+    }
+}
